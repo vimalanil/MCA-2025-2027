@@ -1,0 +1,97 @@
+/* Reset & base styles */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: 'Inter', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(135deg, #667eea, #764ba2);
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem;
+  color: #333;
+}
+
+/* Form Container */
+form {
+  background-color: #fff;
+  width: 400px;
+  max-width: 100%;
+  padding: 2.5rem 3rem;
+  border-radius: 12px;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.12);
+  display: flex;
+  flex-direction: column;
+}
+
+/* Form Heading */
+form::before {
+  content: "Create Account";
+  font-size: 1.75rem;
+  font-weight: 700;
+  color: #4a4a4a;
+  margin-bottom: 1.5rem;
+  text-align: center;
+}
+
+/* Labels */
+label {
+  font-weight: 600;
+  margin-bottom: 0.35rem;
+  font-size: 0.95rem;
+  color: #555;
+}
+
+/* Inputs */
+input[type="text"],
+input[type="number"],
+input[type="email"],
+input[type="password"] {
+  padding: 0.75rem 1rem;
+  font-size: 1rem;
+  border: 2px solid #ddd;
+  border-radius: 8px;
+  margin-bottom: 1.4rem;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+input[type="text"]:focus,
+input[type="number"]:focus,
+input[type="email"]:focus,
+input[type="password"]:focus {
+  border-color: #6c63ff;
+  box-shadow: 0 0 8px rgba(108, 99, 255, 0.4);
+  outline: none;
+}
+
+/* Submit Button */
+input[type="submit"] {
+  padding: 0.85rem;
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: #fff;
+  background-color: #6c63ff;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background-color 0.25s ease;
+  box-shadow: 0 8px 15px rgba(108, 99, 255, 0.4);
+}
+
+input[type="submit"]:hover {
+  background-color: #574fd6;
+  box-shadow: 0 10px 20px rgba(87, 79, 214, 0.6);
+}
+
+/* Responsive */
+@media (max-width: 450px) {
+  form {
+    padding: 2rem 1.5rem;
+    width: 100%;
+  }
+}

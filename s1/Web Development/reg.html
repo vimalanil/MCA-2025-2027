@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Course Registration</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        body {
+            background: linear-gradient(135deg, #6a11cb 0%, #2575fc 100%);
+            color: #333;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+        }
+        
+        .container {
+            width: 100%;
+            max-width: 800px;
+            background: white;
+            border-radius: 15px;
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+            overflow: hidden;
+            margin: 20px 0;
+        }
+        
+        .header {
+            background: #4a6fc7;
+            color: white;
+            padding: 25px;
+            text-align: center;
+        }
+        
+        .header h2 {
+            font-size: 28px;
+            margin-bottom: 5px;
+        }
+        
+        .header p {
+            font-size: 16px;
+            opacity: 0.9;
+        }
+        
+        .form-container {
+            padding: 30px;
+        }
+        
+        fieldset {
+            border: 2px solid #e0e0e0;
+            border-radius: 10px;
+            padding: 20px;
+            margin-bottom: 25px;
+        }
+        
+        legend {
+            font-size: 18px;
+            font-weight: 600;
+            color: #4a6fc7;
+            padding: 0 15px;
+            background: white;
+        }
+        
+        .form-group {
+            display: flex;
+            flex-wrap: wrap;
+            margin-bottom: 15px;
+            align-items: center;
+        }
+        
+        .form-group label {
+            width: 150px;
+            font-weight: 500;
+            color: #555;
+        }
+        
+        .form-control {
+            flex: 1;
+            min-width: 200px;
+            padding: 12px 15px;
+            border: 1px solid #ddd;
+            border-radius: 6px;
+            font-size: 16px;
+            transition: all 0.3s;
+        }
+        
+        .form-control:focus {
+            outline: none;
+            border-color: #4a6fc7;
+            box-shadow: 0 0 0 2px rgba(74, 111, 199, 0.2);
+        }
+        
+        textarea.form-control {
+            min-height: 100px;
+            resize: vertical;
+        }
+        
+        .radio-group {
+            display: flex;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+        
+        .radio-option {
+            display: flex;
+            align-items: center;
+            gap: 5px;
+        }
+        
+        input[type="radio"] {
+            accent-color: #4a6fc7;
+        }
+        
+        select.form-control {
+            background: white;
+        }
+        
+        .btn {
+            background: #4a6fc7;
+            color: white;
+            border: none;
+            padding: 14px 30px;
+            font-size: 18px;
+            border-radius: 8px;
+            cursor: pointer;
+            display: block;
+            margin: 20px auto 10px;
+            transition: all 0.3s;
+            font-weight: 600;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        
+        .btn:hover {
+            background: #3b5aa6;
+            transform: translateY(-2px);
+            box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15);
+        }
+        
+        .btn:active {
+            transform: translateY(0);
+        }
+        
+        .form-note {
+            text-align: center;
+            margin-top: 15px;
+            color: #777;
+            font-size: 14px;
+        }
+        
+        @media (max-width: 600px) {
+            .form-group label {
+                width: 100%;
+                margin-bottom: 8px;
+            }
+            
+            .form-control {
+                min-width: 100%;
+            }
+            
+            .radio-group {
+                flex-direction: column;
+                gap: 10px;
+            }
+            
+            fieldset {
+                padding: 15px;
+            }
+        }
+        
+        .required::after {
+            content: " *";
+            color: #e22;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h2><i class="fas fa-graduation-cap"></i> Course Registration</h2>
+            <p>Please complete the form below to register for your course</p>
+        </div>
+        
+        <div class="form-container">
+            <form action="#" method="post">
+                <fieldset>
+                    <legend><i class="fas fa-user"></i> Personal Data</legend>
+                    
+                    <div class="form-group">
+                        <label for="name" class="required">Name:</label>
+                        <input type="text" id="name" class="form-control" placeholder="Enter your full name" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="dob" class="required">Date of Birth:</label>
+                        <input type="date" id="dob" class="form-control" name="dob" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label class="required">Gender:</label>
+                        <div class="radio-group">
+                            <div class="radio-option">
+                                <input type="radio" id="male" name="gender" value="male" required>
+                                <label for="male">Male</label>
+                            </div>
+                            <div class="radio-option">
+                                <input type="radio" id="female" name="gender" value="female">
+                                <label for="female">Female</label>
+                            </div>
+                            <div class="radio-option">
+                                <input type="radio" id="others" name="gender" value="others">
+                                <label for="others">Others</label>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="course" class="required">Course:</label>
+                        <select id="course" name="course" class="form-control" required>
+                            <option value="">Select a course</option>
+                            <option value="BA">BA</option>
+                            <option value="BCA">BCA</option>
+                            <option value="BSC">BSC</option>
+                        </select>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="address" class="required">Address:</label>
+                        <textarea id="address" name="address" class="form-control" placeholder="Enter your complete address" required></textarea>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="phone" class="required">Phone:</label>
+                        <input type="tel" id="phone" class="form-control" placeholder="Enter your 10-digit phone number" pattern="[0-9]{10}" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="guardian">Guardian:</label>
+                        <input type="text" id="guardian" name="guardian" class="form-control" placeholder="Name of parent or guardian">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="hobbies">Hobbies:</label>
+                        <textarea id="hobbies" name="hobbies" class="form-control" placeholder="List your hobbies and interests"></textarea>
+                    </div>
+                </fieldset>
+                
+                <fieldset>
+                    <legend><i class="fas fa-university"></i> Official Information</legend>
+                    
+                    <div class="form-group">
+                        <label for="applicationNo" class="required">Application No:</label>
+                        <input type="text" id="applicationNo" class="form-control" placeholder="Enter your application number" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="admissionDate" class="required">Admission Date:</label>
+                        <input type="date" id="admissionDate" class="form-control" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="remarks">Remarks:</label>
+                        <input type="text" id="remarks" class="form-control" placeholder="Any additional remarks">
+                    </div>
+                </fieldset>
+                
+                <button type="submit" class="btn">Submit Registration <i class="fas fa-paper-plane"></i></button>
+                
+                <p class="form-note">Fields marked with <span class="required"></span> are required</p>
+            </form>
+        </div>
+    </div>
+</body>
+</html>
