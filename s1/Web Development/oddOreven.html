@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Odd or Even Checker</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f0f4f8;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+    }
+
+    .container {
+      background: white;
+      padding: 30px 40px;
+      border-radius: 10px;
+      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.856);
+      text-align: center;
+      width: 320px;
+    }
+
+    h2 {
+      margin-bottom: 20px;
+      color: #333;
+    }
+
+    form {
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+    }
+
+    input[type="number"] {
+      padding: 10px 15px;
+      font-size: 16px;
+      border: 2px solid #ddd;
+      border-radius: 6px;
+      transition: border-color 0.3s;
+    }
+
+    input[type="number"]:focus {
+      border-color: #14ca23;
+      outline: none;
+    }
+
+    button {
+      padding: 12px;
+      font-size: 16px;
+      background-color: #007BFF;
+      border: none;
+      border-radius: 6px;
+      color: white;
+      cursor: pointer;
+      transition: background-color 0.3s;
+    }
+
+    button:hover {
+      background-color: #0056b3;
+    }
+
+    #result {
+      margin-top: 20px;
+      font-weight: 600;
+      font-size: 18px;
+      color: #555;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h2>Check if a Number is Odd or Even</h2>
+    
+    <form id="oddEvenForm">
+      <input type="number" id="numberInput" placeholder="Enter a number" required>
+      <button type="submit">Check</button>
+    </form>
+    
+    <p id="result"></p>
+  </div>
+  
+  <script>
+    document.getElementById('oddEvenForm').addEventListener('submit', function(event) {
+      event.preventDefault();  // Prevent form submission reload
+      
+      const num = parseInt(document.getElementById('numberInput').value);
+      const result = document.getElementById('result');
+      
+      if (isNaN(num)) {
+        result.textContent = "Please enter a valid number.";
+        result.style.color = 'red';
+        return;
+      }
+      
+      if (num % 2 === 0) {
+        result.textContent = num + " is even.";
+        result.style.color = '#007BFF';
+      } else {
+        result.textContent = num + " is odd.";
+        result.style.color = '#28a745';
+      }
+    });
+  </script>
+</body>
+</html>

@@ -1,0 +1,68 @@
+/* styles.css */
+
+body {
+  font-family: Arial, sans-serif;
+  margin: 20px;
+  background: #b4babd;
+}
+
+h1 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: rgb(0, 0, 0);
+}
+
+#library {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 15px;    
+  justify-items: center;
+}
+
+.book-card {
+  background: white;
+  border-radius: 6px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  padding: 15px;
+  width: 100%;
+  max-width: 220px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  align-items: center;
+  
+}
+
+.book-card:hover{
+    color: beige;
+}
+
+.book-image {
+  width: 150px;
+  height: 220px;
+  object-fit: cover;
+  border-radius: 4px;
+  box-shadow: 0 0 6px rgba(0,0,0,0.15);
+}
+
+.book-title {
+  font-weight: bold;
+  font-size: 1.2em;
+  text-align: center;
+}
+
+.book-author {
+  font-style: italic;
+  color: #555;
+  text-align: center;
+}
+
+.book-availability.available {
+  color: green;
+  font-weight: bold;
+}
+
+.book-availability.checked-out {
+  color: red;
+  font-weight: bold;
+}

@@ -1,0 +1,6 @@
+Basic qtsn
+
+Collection-List Comprehension
+
+Function
+Lambda

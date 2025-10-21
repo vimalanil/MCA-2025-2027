@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Course Registration Form</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        body {
+            background-color: #f5f7fa;
+            color: #333;
+            line-height: 1.6;
+            padding: 20px;
+            margin: 0;
+        }
+        
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            background: white;
+            padding: 25px;
+            border-radius: 10px;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+        }
+        
+        h2 {
+            text-align: center;
+            color: #2c3e50;
+            margin-bottom: 25px;
+            font-size: 28px;
+        }
+        
+        fieldset {
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            padding: 20px;
+            margin-bottom: 25px;
+        }
+        
+        legend {
+            font-weight: bold;
+            padding: 0 15px;
+            color: #3498db;
+            font-size: 18px;
+            text-transform: uppercase;
+        }
+        
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        
+        tr {
+            margin-bottom: 15px;
+        }
+        
+        th, td {
+            padding: 12px;
+            text-align: left;
+        }
+        
+        th {
+            width: 30%;
+            text-align: right;
+            padding-right: 20px;
+            color: #2c3e50;
+            font-weight: 600;
+        }
+        
+        input[type="text"],
+        input[type="date"],
+        input[type="number"],
+        select,
+        textarea {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            font-size: 16px;
+        }
+        
+        input:focus,
+        select:focus,
+        textarea:focus {
+            outline: none;
+            border-color: #3498db;
+            box-shadow: 0 0 5px rgba(52, 152, 219, 0.5);
+        }
+        
+        .radio-group {
+            display: flex;
+            gap: 15px;
+        }
+        
+        .radio-option {
+            display: flex;
+            align-items: center;
+            gap: 5px;
+        }
+        
+        input[type="submit"] {
+            background-color: #3498db;
+            color: white;
+            border: none;
+            padding: 12px 25px;
+            font-size: 18px;
+            border-radius: 5px;
+            cursor: pointer;
+            display: block;
+            margin: 20px auto;
+            transition: background-color 0.3s;
+        }
+        
+        input[type="submit"]:hover {
+            background-color: #2980b9;
+        }
+        
+        @media (max-width: 600px) {
+            th, td {
+                display: block;
+                width: 100%;
+                text-align: left;
+                padding: 8px;
+            }
+            
+            th {
+                padding-bottom: 5px;
+                padding-top: 15px;
+                border-bottom: none;
+            }
+            
+            .radio-group {
+                flex-direction: column;
+                gap: 8px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Course Registration</h2>
+        
+        <form action="#" method="post">
+            <fieldset>
+                <legend>Personal Data</legend>
+                <table>
+                    <tr>
+                        <th>Name:</th>
+                        <td><input type="text" required></td>
+                    </tr>
+                    <tr>
+                        <th>DOB:</th>
+                        <td><input type="date" name="dob" id="dob" required></td>
+                    </tr>
+                    <tr>
+                        <th>Gender:</th>
+                        <td>
+                            <div class="radio-group">
+                                <div class="radio-option">
+                                    <input type="radio" value="male" name="gender" id="male" required>
+                                    <label for="male">Male</label>
+                                </div>
+                                <div class="radio-option">
+                                    <input type="radio" value="female" name="gender" id="female">
+                                    <label for="female">Female</label>
+                                </div>
+                                <div class="radio-option">
+                                    <input type="radio" value="others" name="gender" id="others">
+                                    <label for="others">Others</label>
+                                </div>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>Course:</th>
+                        <td>
+                            <select name="course" id="course" required>
+                                <option value="">Select a course</option>
+                                <option value="BA">BA</option>
+                                <option value="BCA">BCA</option>
+                                <option value="BSC">BSC</option>
+                            </select>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>Address:</th>
+                        <td><textarea name="address" id="address" rows="3" required></textarea></td>
+                    </tr>
+                    <tr>
+                        <th>Phone:</th>
+                        <td><input type="number" min="6999999999" max="9999999999" required></td>
+                    </tr>
+                    <tr>
+                        <th>Guardian:</th>
+                        <td><input type="text" name="guardian" id="guardian" required></td>
+                    </tr> 
+                    <tr>
+                        <th>Hobbies:</th>
+                        <td><textarea name="hobbies" id="hobbies" rows="3"></textarea></td>
+                    </tr>
+                </table>
+            </fieldset>
+            
+            <fieldset>
+                <legend>Official</legend>
+                <table>
+                    <tr>
+                        <th>Application No:</th>
+                        <td><input type="text" required></td>
+                    </tr>
+                    <tr>
+                        <th>Admission Date:</th>
+                        <td><input type="date" required></td>
+                    </tr>
+                    <tr>
+                        <th>Remarks:</th>
+                        <td><input type="text"></td>
+                    </tr>
+                </table>
+            </fieldset>
+            
+            <input type="submit" value="Register">
+        </form>
+    </div>
+</body>
+</html>

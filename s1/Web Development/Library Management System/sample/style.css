@@ -1,0 +1,30 @@
+body{
+    margin: 0;
+    background: rgb(91, 91, 177);
+    align-items: center;
+    justify-content: center;
+    padding: 10rem;
+    display: flex;
+    min-height: 100vh;
+}
+
+form{
+    padding: 10%;
+    background-color: aliceblue;
+    width: fit-content;
+    height: fit-content;
+    padding: auto;
+}
+
+.login-container{
+    background: red;
+    width: fit-content;
+    height: fit-content;
+}
+
+label {
+  font-weight: 600;
+  margin-bottom: 0.35rem;
+  font-size: 0.95rem;
+  color: #555;
+}

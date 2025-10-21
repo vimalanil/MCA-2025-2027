@@ -1,0 +1,1 @@
+1. create a library management system where each book shows it's title author and it's availabilty

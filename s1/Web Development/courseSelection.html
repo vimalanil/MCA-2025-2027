@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration</title>
+    <style>
+        body {
+            background: linear-gradient(135deg, #6a11cb 0%, #2575fc 100%);
+            color: #333;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+        }
+        fieldset {
+            border: 2px solid #e0e0e0;
+            border-radius: 10px;
+            padding: 20px;
+            margin-bottom: 25px;
+        }
+        legend {
+            font-size: 18px;
+            font-weight: 600;
+            color: #4a6fc7;
+            padding: 0 15px;
+            background: white;
+        }
+    </style>
+    <style>
+         fieldset {
+            border: 2px solid #e0e0e0;
+            border-radius: 10px;
+            padding: 20px;
+            margin-bottom: 25px;
+        }
+    </style>
+</head>
+<body>
+    <center>
+    <h2>Course Registration</h2>
+    <fieldset>
+        <legend><i class="fas fa-user"></i> Personal Data</legend>
+    <form action="" aling="center">
+        <table>
+            <tr>
+                <th>Name:</th>
+                <th><input type="text"></th>
+            </tr>
+            <tr>
+                <th>DOB:</th>
+                <th><input type="date" name="dob" id="dob"></th>
+            </tr>
+            <tr>
+                <th>Gender:</th>
+                <td> <input type="radio" value="male" id="gender">male
+                    <input type="radio" value="female" id="gender">female
+                    <input type="radio" value="others" id="gender">others</td>
+            </tr>
+            <tr>
+                <th>course:</th>
+                <td><select name="course" id="course">
+                    <option value="BA">BA</option>
+                    <option value="BCA">BCA</option>
+                    <option value="BSC">BCS</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <th>Address:</th>
+                <td><textarea name="address" id=""></textarea></td>
+            </tr>
+            <tr>
+                <th>phone:</th>
+                <td><input type="number" min="6999999999" max="9999999999"></td>
+            </tr>
+            <tr>
+                <th>Guardian:</th>
+                <td><input type="text" name="guardian" id="guardian"></td>
+            </tr> 
+            <tr>
+                <th>Hobbies:</th>
+                <td> <textarea name="hobbies" id=""></textarea></td>
+            </tr>
+        </table>
+    </fieldset><br><br>
+    <fieldset>
+        <legend>offical</legend>
+        <table>
+            <tr>
+                <th>application no</th>
+                <td><input type="text"></td>
+                
+            </tr>
+            <tr>
+                <th>admission date</th>
+                <th><input type="date" id="admissionDate" class="form-control" required></th>
+                
+            </tr>
+            <tr>
+                <th>remarks</th>
+                <td><input type="text"></td>
+            </tr>
+        </table>
+
+        
+
+    </fieldset>    
+    <input type="submit">  
+    </form>
+
+
+</center>
+</body>
+</html>

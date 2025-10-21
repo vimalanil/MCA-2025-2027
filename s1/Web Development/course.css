@@ -1,0 +1,30 @@
+        body {
+            background: linear-gradient(135deg, #6a11cb 0%, #2575fc 100%);
+            color: #333;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+        }
+        fieldset {
+            border: 2px solid #e0e0e0;
+            border-radius: 10px;
+            padding: 20px;  
+            margin-bottom: 25px;
+        }
+        legend {
+            font-size: 18px;
+            font-weight: 600;
+            color: #4a6fc7;
+            padding: 0 15px;
+            background: white;
+        }
+         fieldset {
+            border: 2px solid #e0e0e0;
+            border-radius: 10px;
+            padding: 20px;
+            margin-bottom: 25px;
+        }
+    
