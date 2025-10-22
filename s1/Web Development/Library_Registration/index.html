@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Library Management - Registration</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <h2>Library Member Registration</h2>
+    <form id="registrationForm" onsubmit="return validateForm(event)">
+      <div class="form-group">
+        <label for="name">Full Name:</label>
+        <input type="text" id="name" placeholder="Enter your name">
+      </div>
+
+      <div class="form-group">
+        <label for="email">Email ID:</label>
+        <input type="email" id="email" placeholder="Enter your email">
+      </div>
+
+      <div class="form-group">
+        <label for="phone">Phone Number:</label>
+        <input type="text" id="phone" placeholder="Enter your phone number">
+      </div>
+
+      <div class="form-group">
+        <label for="password">Create Password:</label>
+        <input type="password" id="password" placeholder="Enter password">
+      </div>
+
+      <div class="form-group">
+        <label for="confirmPassword">Confirm Password:</label>
+        <input type="password" id="confirmPassword" placeholder="Confirm password">
+      </div>
+
+      <div class="form-group">
+        <label for="memberType">Member Type:</label>
+        <select id="memberType">
+          <option value="">--Select--</option>
+          <option value="student">Student</option>
+          <option value="faculty">Faculty</option>
+          <option value="guest">Guest</option>
+        </select>
+      </div>
+
+      <button type="submit">Register</button>
+    </form>
+    <p id="error-message"></p>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
