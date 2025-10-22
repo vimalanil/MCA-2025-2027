@@ -8,7 +8,7 @@ struct Node {
     struct Node* right;
 };
 
-    if (root == NULL)
+    if(root == NULL)
         return createNode(data);
 
     if (data < root->data)
