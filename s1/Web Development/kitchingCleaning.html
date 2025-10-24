@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Cooking and Cleaning</title>
+</head>
+<body>
+  <h2>Cooking and Cleaning Simulation</h2>
+  <button id="startBtn">Start Cooking & Cleaning</button>
+  <div id="log" style="margin-top:20px; font-family: monospace;"></div>
+
+  <script>
+    const logDiv = document.getElementById('log');
+
+    function log(message) {
+      const p = document.createElement('p');
+      p.textContent = message;
+      logDiv.appendChild(p);
+    }
+
+    function cook() {
+      log("Cooking started...");
+      setTimeout(() => {
+        log("Cooking finished!");
+      }, 3000); // 3 seconds
+    }
+
+    function clean() {
+      log("Cleaning started...");
+      // Cleaning happens immediately
+    }
+
+    document.getElementById('startBtn').addEventListener('click', () => {
+      cook();  // start cooking asynchronously
+      clean(); // start cleaning immediately without waiting
+    });
+  </script>
+</body>
+</html>
+    
