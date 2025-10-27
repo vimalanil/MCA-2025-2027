@@ -61,7 +61,7 @@ void primMST(int **graph) {
 }
 
 int main() {
-    printf("Enter the number of vertices (N): ");
+    printf("Enter the number of vertices (N): "); // Number of vertices
     if (scanf("%d", &V) != 1 || V <= 0) {
         printf("Invalid number of vertices.\n");
         return 1;
