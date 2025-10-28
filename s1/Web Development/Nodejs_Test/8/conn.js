@@ -4,7 +4,7 @@ const con = mysql.createConnection({
     host: 'localhost',
     user: 'root',
     password: '4442',
-    database: 'T_db'
+    database: 'CollegeDB'
 });
  
 con.connect((err) => {
@@ -14,7 +14,7 @@ con.connect((err) => {
     }
     console.log('Connected to MySQL server');
  
-    con.query('CREATE DATABASE IF NOT EXISTS T_db', (err, result) => {
+    con.query('CREATE DATABASE IF NOT EXISTS CollegeDB', (err, result) => {
         if (err) throw err;
        
         con.end();
