@@ -49,7 +49,6 @@ void BFS(int graph[MAX][MAX], int start, int vertices) {
     }
     printf("\n");
 }
-
 int main() {
     int graph[MAX][MAX] = {0};
     int edges, vertices;
