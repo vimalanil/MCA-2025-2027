@@ -1,6 +1,3 @@
-# Write a program to get a string from the user
-
-# (a) Replace all occurances of first character with '$' except first character.
 s = input("Enter a string")
 ch = s[0]
 new_s = s[0]+s[1:].replace(ch,"$")
